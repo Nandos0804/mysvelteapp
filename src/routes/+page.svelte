@@ -1,16 +1,21 @@
 <script lang="ts">
+    import "../app.css";
     import Foo from "./Foo.svelte";
+
     let name: string = "giuseppe ErnaNdez";
     let src = "./favicon.png";
     let textFormatted: string =
         "This is a paragraph with <em>some</em> infotext.";
     let count: number = $state(0);
+
+
     function increment() {
         count += 1;
     }
+
 </script>
 
-<div class="container mx-auto py-4">
+<div class="container mx-auto py-4 mt-30">
     <h1>hello {name.toUpperCase()}</h1>
 
     <img {src} alt="Logo" />

@@ -1,13 +1,20 @@
 <script>
-    let number = $state([1]);
+    // IMPORT
     import "../app.css";
+    
+    // VARIABILI
+    let number = $state([1,2]);
+    let total = $derived(number.reduce((acc, num) => acc + num, 0));
 
+    // FUNCTIONS
     function addNumber() {
-        // versione a
         number[number.length] = number.length + 1;
-        // versione b
-        // number.push(number.length + 1);
     }
+    
+    function sumNunbers() {
+        return number.reduce((acc, num) => acc + num, 0);
+    }
+
 </script>
 
 <div class="container mx-auto py-10">
@@ -20,6 +27,10 @@
     <button onclick={addNumber} class="btn">
         <h3>{number[number.length - 1]}</h3>
     </button>
+</div>
+
+<div class="container mx-auto my-4">
+    <p class="bg-green-500 text-white rounded p-4 hover:bg-green-300">{number.join(' + ')} = {total}</p>
 </div>
 
 <style lang="postcss">
