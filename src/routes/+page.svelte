@@ -10,24 +10,28 @@
     }
 </script>
 
-<h1>hello {name.toUpperCase()}</h1>
+<div class="container mx-auto py-4">
+    <h1>hello {name.toUpperCase()}</h1>
 
-<img {src} alt="Logo" />
+    <img {src} alt="Logo" />
 
-<p class="text-info">This is a paragraph with some infotext.</p>
+    <p class="text-info">This is a paragraph with some infotext.</p>
 
-<p>{textFormatted}</p>
+    <p>{textFormatted}</p>
 
-<p>{@html textFormatted}</p>
+    <p>{@html textFormatted}</p>
 
-<button onclick={increment}>
-    Count {count}
-    {count === 0 ? "Click me!" : "Clicked!"}
-</button>
+
+    <button onclick={increment} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Count {count}
+        {count === 0 ? "Click me!" : "Clicked!"}
+    </button>
+</div>
 
 <Foo />
 
-<style>
+<style lang="postcss">
+    @reference "tailwindcss";
     .text-info {
         color: red;
         font-size: 2rem;
