@@ -14,7 +14,10 @@
 </script>
 
 <div class="container mx-auto py-4 mt-30">
+
+
     <img {src} alt="Logo" />
+
 
     <h1 class="font-bold text-red-400 text-2xl py-7">
         Svelte + tailwindcss
